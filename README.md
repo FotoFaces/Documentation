@@ -45,13 +45,13 @@ Our project will consist of a mobile application that sends a photo to an API wh
 - Robust backend capable of scaling
 
 ### Related Work
-https://github.com/hamzasafdar01/Image-Blur-detection-and-image-quality-check-python
-https://www.pyimagesearch.com/2015/09/07/blur-detection-with-opencv/
-https://github.com/WillBrennan/BlurDetection2
-http://scikit-image.org/docs/dev/api/skimage.exposure.html
-https://github.com/AndreasMerentitis/detect-contrast-blurriness
-https://github.com/TianxingWu/realtime-glasses-detection
-https://pyimagesearch.com/2019/03/11/liveness-detection-with-opencv/
+- https://github.com/hamzasafdar01/Image-Blur-detection-and-image-quality-check-python
+- https://www.pyimagesearch.com/2015/09/07/blur-detection-with-opencv/
+- https://github.com/WillBrennan/BlurDetection2
+- http://scikit-image.org/docs/dev/api/skimage.exposure.html
+- https://github.com/AndreasMerentitis/detect-contrast-blurriness
+- https://github.com/TianxingWu/realtime-glasses-detection
+- https://pyimagesearch.com/2019/03/11/liveness-detection-with-opencv/
 
 ### Arquitecture
 
@@ -63,26 +63,43 @@ https://pyimagesearch.com/2019/03/11/liveness-detection-with-opencv/
 ### Tasks
 | Filipe | Gonçalo | João | Pedro | Vicente |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| Organise the team and generate backlog & Maintain a good project documentation for posteriori | Operate and do maintenance for the project repository & Make sure the project runs everywhere | Design the aesthetic of the project & Manage software quality among all algorithms | Manage software quality among all algorithms & Organise the tasks for the Quality Team | Design the Architecture of the project & Maintain and upgrade the architecture when needed |
+| Organise the team and generate backlog | Operate and do maintenance for the project repository | Design the aesthetic of the project | Manage software quality among all algorithms | Design the Architecture of the project |
+| Maintain a good project documentation for posteriori | Make sure the project runs everywhere | Manage software quality among all algorithms | Organise the tasks for the Quality Team | Maintain and upgrade the architecture when needed |
+Every group member shoul also be a Developer
 
 ### Communication Plan
-Discord for team discussion and communication
-Outlook for advisor-team discussion relationship
-GitHub Project for backlog management
-Promotional Website for organisation and advertisement
+- Discord for team discussion and communication
+- Outlook for advisor-team discussion relationship
+- GitHub Project for backlog management
+- Promotional Website for organisation and advertisement
 
 ### Development Tools
-GitHub for code repository
-React for website builder
-React Native for mobile app builder
-Discord for team communication
+- GitHub for code repository
+- React for website builder
+- React Native for mobile app builder
+- Discord for team communication
 
 ### Project Calendar
+In each iteration the documentation should be updated
 
 #### Milestone 1
+- Create a project calendar
+- Set up code repositories
+- Define the system architecture
+- Build a draft for the website
 
 #### Milestone 2
+- Validate the architecture
+- Simple Project Development
+- Research technologies
+- Improve the promotional website
 
 #### Milestone 3
+- Build the API
+- Rebuild old algorithms
+- Add new algorithms
+- Start the build of the mobile app
 
 #### Milestone 4
+- Finish the mobile app
+- Add new algorithms
