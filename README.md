@@ -72,6 +72,7 @@ Our project will consist of a mobile application that sends a photo to an API wh
 - Outlook for advisor-team discussion relationship
 - GitHub Project for backlog management
 - Promotional Website for organisation and advertisement
+- File maintaining architectural choices and most asked questions
 
 ### Development Tools
 - GitHub for code repository
