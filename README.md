@@ -65,7 +65,7 @@ Our project will consist of a mobile application that sends a photo to an API wh
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | Organise the team and generate backlog | Operate and do maintenance for the project repository | Design the aesthetic of the project | Manage software quality among all algorithms | Design the Architecture of the project |
 | Maintain a good project documentation for posteriori | Make sure the project runs everywhere | Manage software quality among all algorithms | Organise the tasks for the Quality Team | Maintain and upgrade the architecture when needed |
-Every group member shoul also be a Developer
+| Developer | Developer | Developer | Developer | Developer |
 
 ### Communication Plan
 - Discord for team discussion and communication
