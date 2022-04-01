@@ -33,21 +33,30 @@ This repository was created to help organize all the documentation made by the F
 ## Inception Phase
 
 ### Context
-Being able to identify someone by their face is globally used in normal day life, but when we try and categorise people in a certain company, or enterprise, it is not always easy. Inserting a photo anywhere is not the main problem, but assuring that when updating it with a new photo, it’s valid and usable can get tricky. Therefore, the search for a way to upload new photos and validate it with new/better algorithms that prevent any backlash is highly requested.
+The University has a system for updating photos.
+Our project resides in identifying people in them and adjusting those photos in order to have a high quality and an easy association between a person’s name and their face.
+We strive to invalidate photos which do not respect some standards: wearing glasses, using a hat, tilted head, etc. .
 
 ### Problem
-Our project will consist of a mobile application that sends a photo to an API which will respond with characteristics of that photo (Ex.: Has a face, has glasses…) and, according to the response message, the mobile app will check if it’s valid and update it to the database.
+- Send photo to an API
+- It will respond with the characteristics of the photo
+- The app will check if the characteristics are valid
+- Updates the photo to the database
 
 ### Goals
-- Facial Recognition functionalities
-- Improve existing algorithms in FotoFaces
-- Add algorithms to FotoFaces to improve the reliability of the Facial Recognition
-- Implement deep learning to make the FotoFaces algorithms more reliable
+- Facial Recognition
+- Fix face orientation
+- Analyse photo quality
+- Blur background
+- Recognize invalid objects, such as hats and sunglasses
+- Crop face accordingly
+- Implement deep learning
 
 ### Risks
 - Modularization Problems
 - Performance and Efficiency of the algorithms
 - Bad implementation of deep learning
+- Biased or insufficient training set
 
 ### Expected Results
 - Fully functional mobile app with FotoFaces integration
@@ -68,14 +77,14 @@ Our project will consist of a mobile application that sends a photo to an API wh
 ### Roles
 | Filipe | Gonçalo | João | Pedro | Vicente |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| Team Manager | DevOps | FrontEnd & Quality Team | Quality Manager | Architect |
+| Team Manager | DevOps | Lead Developer | Quality Manager | Architect |
+| Communications | Backend | Frontend | Backend | Infrastructure |
 
 ### Tasks
 | Filipe | Gonçalo | João | Pedro | Vicente |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | Organise the team and generate backlog | Operate and do maintenance for the project repository | Design the aesthetic of the project | Manage software quality among all algorithms | Design the Architecture of the project |
-| Maintain a good project documentation for posteriori | Make sure the project runs everywhere | Manage software quality among all algorithms | Organise the tasks for the Quality Team | Maintain and upgrade the architecture when needed |
-| Developer | Developer | Developer | Developer | Developer |
+| Integrate communication service with the backend and frontend | Integrate with the communications logic | Create the required communication services with the backend | Develop the API and its endpoints | Maintain and upgrade the infrastructure when needed |
 
 ### Communication Plan
 - Discord for team discussion and communication
