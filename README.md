@@ -25,7 +25,7 @@ This repository was created to help organize all the documentation made by the F
             - [Functional](#Functional)
                 - [Mobile App](#Mobile-App)
                 - [FotoFaces](#FotoFaces)
-                - [FotoFaces Algorithms](#Algorithms)
+                - [FotoFaces Algorithms](#FotoFaces-Algorithms)
         - [Actors](#Actors)
         - [Use Case](#Use-Case)
         - [Database](#Database)
