@@ -19,6 +19,16 @@ This repository was created to help organize all the documentation made by the F
             - [Milestone 2](#Milestone-2)
             - [Milestone 3](#Milestone-3)
             - [Milestone 4](#Milestone-4)
+    - [Elaboration Phase](#Elaboration-Phase)
+        - [Requirements](#Requirements)
+            - [Non-Functional](#Non-Functional)
+            - [Functional](#Functional)
+                - [Mobile App](#Mobile-App)
+                - [FotoFaces](#FotoFaces)
+                - [FotoFaces Algorithms](#Algorithms)
+        - [Actors](#Actors)
+        - [Use Case](#Use-Case)
+        - [Database](#Database)
 
 ## Inception Phase
 
@@ -104,3 +114,48 @@ In each iteration the documentation should be updated
 #### Milestone 4
 - Finish the mobile app
 - Add new algorithms
+
+## Elaboration Phase
+
+### Requirements
+
+#### Non-Functional
+- Scalability - When many users use the API at the same time
+- Reliability - It shouldn’t crash all the time 
+- Availability - Always available to any user 
+- Maintainability - Maintain documentation and infrastructure 
+- Usability - Intuitive application
+
+#### Functional
+
+##### Mobile App
+- The system must allow the user to login with username and password (or SSO)
+- The system must allow the user to check his current photo
+- The system must allow the user to check the properties needed for a photo to be valid
+- The system must allow the user to pick between taking a live photo or choosing a photo from the gallery and do one of them
+- The system must allow the user to choose between updating a valid photo, going back to the last menu or return to the main page
+- The system must send a photo and the user ID to the FotoFaces API 
+- The system must receive a JSON from the FotoFaces API with the validation properties
+- The system must check the validity of a photo (based on its properties)
+- The system must show the user if the chosen photo is valid
+
+##### FotoFaces
+- The system must be able to receive a photo and an user ID
+- The system must get the user old photo from the database
+- The system must compare the photos and check if it’s the same person
+- The system must detect a series of properties from the new photo
+- The system must send the detected properties in a JSON format to the user
+- The system must allow for plugins to be added for detection of more properties
+
+##### FotoFaces Algorithms
+- Algorithm 1
+
+### Actors
+- Professors
+- Students
+
+### Use Case
+- Use Case
+
+### Database
+- Database
