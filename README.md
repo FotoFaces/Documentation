@@ -2,6 +2,7 @@
 This repository was created to help organize all the documentation made by the Fotofaces Project.
 
 - [FotoFaces - Documentation](#FotoFaces---Documentation)
+
     - [Inception Phase](#Inception-Phase)
         - [Context](#Context)
         - [Problem](#Problem)
@@ -19,6 +20,7 @@ This repository was created to help organize all the documentation made by the F
             - [Milestone 2](#Milestone-2)
             - [Milestone 3](#Milestone-3)
             - [Milestone 4](#Milestone-4)
+
     - [Elaboration Phase](#Elaboration-Phase)
         - [Requirements](#Requirements)
             - [Non-Functional](#Non-Functional)
@@ -160,8 +162,10 @@ In each iteration the documentation should be updated
 - Algorithm 1
 
 ### Actors
+The UA Information System holds photos from students', professors', investigators' and administration workers' faces, and as such these are our actors 
 - Professors
 - Students
+- Workers
 
 ### Use Case
 - Use Case
