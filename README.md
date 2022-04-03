@@ -1,6 +1,14 @@
 # FotoFaces - Documentation
 This repository was created to help organize all the documentation made by the Fotofaces Project.
 
+# Development Team
+- [Filipe Gonçalves - 98083](https://github.com/FlipGoncalves)
+- [Pedro Lopes - 97827](https://github.com/Pedro-Lopes-Frisson)
+- [Goncalo Machado - 98359](https://github.com/goncalo-machado)
+- [Vicente Costa - 98515](https://github.com/SrPhoenix)
+- [João Borges - 98155](https://github.com/JoaoBorgesUA)
+
+# Index
 - [FotoFaces - Documentation](#FotoFaces---Documentation)
 
     - [Inception Phase](#Inception-Phase)
@@ -29,7 +37,7 @@ This repository was created to help organize all the documentation made by the F
                 - [FotoFaces](#FotoFaces)
                 - [FotoFaces Algorithms](#FotoFaces-Algorithms)
         - [Actors](#Actors)
-        - [Use Case](#Use-Case)
+        - [Diagrams](#Diagrams)
         - [Database](#Database)
 
 ## Inception Phase
@@ -163,12 +171,11 @@ In each iteration the documentation should be updated
 
 ### Actors
 The UA Information System holds photos from students', professors', investigators' and administration workers' faces, and as such these are our actors 
-- Professors
-- Students
-- Workers
+- Employees
+- Human Resources Representatives
 
-### Use Case
-- Use Case
+### Diagrams
+![alt text](Simple_Organizations/UseCase.png)
 
 ### Database
 - Database
