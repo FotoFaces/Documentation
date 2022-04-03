@@ -38,7 +38,12 @@ This repository was created to help organize all the documentation made by the F
                 - [FotoFaces Algorithms](#FotoFaces-Algorithms)
         - [Actors](#Actors)
         - [Diagrams](#Diagrams)
-        - [Database](#Database)
+            - [Deployment Diagram](#Deployment-Diagram)
+            - [Domain Model](#Domain-Model)
+            - [Arquitecture](#Arquitecture)
+        - [Other Organizations](#Other-Organizations)
+            - [Use Case](#Use-Case)
+            - [Database](#Database)
 
 ## Inception Phase
 
@@ -167,7 +172,38 @@ In each iteration the documentation should be updated
 - The system must allow for plugins to be added for detection of more properties
 
 ##### FotoFaces Algorithms
-- Algorithm 1
+- Facial Recognition
+- Face Reference Detected
+- Face Orientation
+- Frontal Face
+- Analyse photo quality
+- Analyse photo brightness
+- Analyse colored Picture
+- Blur background
+- Resize
+- Cropping
+- EyesOpen
+- Gaze
+- Hat
+- Glasses
+- Sunglasses
+- Implement deep learning
+
+##### FotoFaces Properties
+Returns True or False for the following:
+- Face Recognized
+- Frontal Face
+- Eyes Open
+- Hat
+- Glasses
+- Sunglasses
+- Blurred
+- Colored
+- Cropped
+
+Returns Levels for the following:
+- Brightness
+- Quality
 
 ### Actors
 The UA Information System holds photos from students', professors', investigators' and administration workers' faces, and as such these are our actors 
@@ -175,7 +211,22 @@ The UA Information System holds photos from students', professors', investigator
 - Human Resources Representatives
 
 ### Diagrams
-![alt text](Simple_Organizations/UseCase.png)
+All diagrams are in the Images/Arquitecture_Diagrams folder
 
-### Database
-- Database
+#### Deployment Diagram
+![Deployment Diagram](https://github.com/FotoFaces/Documentation/blob/main/Images/Architecure_Diagrams/DeploymentModel.png)
+
+#### Domain Model
+![Domain Model](https://github.com/FotoFaces/Documentation/blob/main/Images/Architecure_Diagrams/DomainModel.png)
+
+#### Arquitecture
+![Simple Arquitecture](https://github.com/FotoFaces/Documentation/blob/main/Images/Architecure_Diagrams/Simple_Architecture.png)
+
+### Other Organizations
+All images  are in the Images/Simple_Organizations folder
+
+#### Use Case
+![Use Case](https://github.com/FotoFaces/Documentation/blob/main/Images/Simple_Organizations/UseCase.png)
+
+#### Database
+![Database](https://github.com/FotoFaces/Documentation/blob/main/Images/Simple_Organizations/db.png)
