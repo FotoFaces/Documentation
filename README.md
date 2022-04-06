@@ -44,6 +44,7 @@ This repository was created to help organize all the documentation made by the F
         - [Other Organizations](#Other-Organizations)
             - [Use Case](#Use-Case)
             - [Database](#Database)
+        - [State of Art](#State-of-Art)
 
 ## Inception Phase
 
@@ -192,6 +193,7 @@ In each iteration the documentation should be updated
 ##### FotoFaces Properties
 Returns True or False for the following:
 - Face Recognized
+- Matches old photo
 - Frontal Face
 - Eyes Open
 - Hat
@@ -200,6 +202,7 @@ Returns True or False for the following:
 - Blurred
 - Colored
 - Cropped
+- Liveliness
 
 Returns Levels for the following:
 - Brightness
@@ -230,3 +233,16 @@ All images  are in the Images/Simple_Organizations folder
 
 #### Database
 ![Database](https://github.com/FotoFaces/Documentation/blob/main/Images/Simple_Organizations/db.png)
+Currently the database that is being used by FotoFaces belongs to the UA and we don’t have full access for testing purposes.
+To solve this, we will create a mock database that simulates the UA database.
+
+### State of Art
+- [Face Recognition](https://www.luxand.com/facesdk/?utm_source=google&utm_medium=cpc&utm_campaign=face-detection)
+- [Blurred](https://github.com/hamzasafdar01/Image-Blur-detection-and-image-quality-check-python)
+- [Cropped](https://github.com/davisking/dlib/blob/master/python_examples/face_alignment.py)
+- [Liveliness](https://pyimagesearch.com/2019/03/11/liveness-detection-with-opencv/)
+- [Eyes Open](https://github.com/Chris10M/open-eye-detector)
+- [Frontal Profile](https://github.com/juan-csv/profile_detection)
+- [Glasses](https://github.com/TianxingWu/realtime-glasses-detection)
+- [Quality](https://sightengine.com/docs/image-quality-detection)
+- [id.ua.pt](https://id.ua.pt/) already offers services to UA, which includes similar software with the one we are going to build
