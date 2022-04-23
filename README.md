@@ -46,6 +46,20 @@ This repository was created to help organize all the documentation made by the F
             - [Database](#Database)
         - [State of Art](#State-of-Art)
 
+    - [Construction Phase](#Construction-Phase)
+        - [API](#API)
+        - [Mobile Applicaion](#Mobile-Applicaion)
+            - [Design](#Design)
+            - [Photos](#Photos)
+            - [API connection](#API-connection)
+        - [FotoFaces](#FotoFaces)
+            - [Plugin Arquitecture](#Plugin-Arquitecture)
+            - [API connection](#API-connection)
+        - [FotoFaces Algorithms](#FotoFaces-Algorithms)
+            - [Face Recognition](#Face-Recognition)
+            - [Face Comparison](#Face-Comparison)
+
+
 ## Inception Phase
 
 ### Context
@@ -139,6 +153,10 @@ In each iteration the documentation should be updated
 #### Milestone 4
 - Finish the mobile app
 - Add new algorithms
+
+
+
+
 
 ## Elaboration Phase
 
@@ -246,3 +264,32 @@ To solve this, we will create a mock database that simulates the UA database.
 - [Glasses](https://github.com/TianxingWu/realtime-glasses-detection)
 - [Quality](https://sightengine.com/docs/image-quality-detection)
 - [id.ua.pt](https://id.ua.pt/) already offers services to UA, which includes similar software with the one we are going to build
+
+
+
+
+
+## Construction Phase
+
+### API
+
+### Mobile Application 
+
+#### Design
+
+#### Photos
+
+#### API connection
+
+### FotoFaces
+
+#### Plugin Arquitecture
+
+#### API connection
+
+### FotoFaces Algorithms
+In this section of the documentation we will analyze each algorithm we execute to validate the photo given to the FotoFaces
+
+#### Face Recognition
+
+#### Face Comparison
