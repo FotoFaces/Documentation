@@ -271,25 +271,105 @@ To solve this, we will create a mock database that simulates the UA database.
 
 ## Construction Phase
 
-### API
+### Database API
+REST API with four endpoints, two for each object.
+The endpoints are mapped to the ip:8393/user/-parameters- or ip:8393/image/-parameters-, depending on the type of the object
+
+#### Image
+- GET
+    - fetches the image from the database, for the user with a specific id; returns a json with the type of command ("get_photo"), the photo and the identification
+- PUT
+    - updates the photo in the database, for the user with a specific id; returns a json with the type ("upload_photo"), the photo and the identification
+
+#### User
+- GET
+    - fetches the user from the database, for the user with a the requested email; returns a json with the type of command ("get_user") and state (error or success)
+- PUT
+    - inserts the user in the database, with his photo, hashed password, username and email; returns a json with the type of command ("create_user") and state (error or success)
 
 ### Mobile Application 
+The Mobile application was made with react-native, using firstly a template for the design and later with a hand-made style.
+It has 8 screens, from LoginScreen and RegisterScreen, to PhotoAccept and MainScreen. Each one of them, represent a step to complete the update of the photo.
+It also has some photo parameters, in which the taken photo needs to be pass to be validated to be presented to the FotoFaces algorithm, whenever a photo is taken, either in MainScreen and RegisterScreen.
+
+#### Screens
+Below, its listed the most important screens used in the application, and what exactly each one of them do.
+
+- StartScreen
+    - Screen in which the application starts
+    - Prompts the user to select either login in the app or register an account
+
+- LoginScreen
+    - Screen in which the user logins in the application
+    - Prompts the user to enter their email and password, or use the login via SSO
+    - Can be used to go to the RegisterScreen, if the user does not have an account already
+    - Can be used to go to the ResetPasswordScreen, if the user does not remember their password
+
+- RegisterScreen
+    - Screen in which the user will create an account in our applciation
+    - Prompts the user to enter their email, a username, password and a photo, from which he can choose to take a new one or select from the gallery of his phone
+
+- ResetPasswordScreen
+    - Screen in which the user will try and recuperate its account
+    - ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    - ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    - ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    - ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    - ^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+
+- MainScreen
+    - Screen in which the user can see some of their personal information and update their photo
+    - Prompts the user to select between choosing a photo from his gallery or take a new live photo 
+    - After a photo is sleected, the user can validate it in the FotoFaces algorithms, and, in case of invalidation, see what went wrong
+    - If the photo is valid, he will be redirected to the PhotoAccept screen
+
+- PhotoAccept
+    - Screen in which the user can choose to update its photo with the new one or not
+    - Prompts the user with both old and new photo and asks the user if he will update or not
+    - If he updates, then he will be redirected to the StartScreen, else he will be redirected back to the MainScreen
 
 #### Design
-
-#### Photos
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #### API connection
+The connection between both the Database API and Mobile App, and Mobile App and FotoFaces is made using the function fetch() with FormData to encrypt the body.
 
 ### FotoFaces
 
 #### Plugin Arquitecture
 
 #### API connection
+The connection between Database API and FotoFaces is not existing, because the old photo is sent directly from the Mobile App, meaning that the FotoFaces is completely independent to the Database.
 
 ### FotoFaces Algorithms
-In this section of the documentation we will analyze each algorithm we execute to validate the photo given to the FotoFaces
+All the algortihms used, will be presented and analyzed here, in the section below.
+
+#### Brightness
+
+#### Colored Picture
+
+#### Cropping
+
+#### Crop Position
+
+#### Open Eyes
+
+#### Face Candidate Detection
 
 #### Face Recognition
 
-#### Face Comparison
+#### Glasses
+
+#### Head Position
+
+#### Image Quality
+
+#### Resize
+
+#### Sunglasses
+
+#### Focus / Gaze
