@@ -349,8 +349,9 @@ The connection between Database API and FotoFaces is not existing, because the o
 All the algortihms used, will be presented and analyzed here, in the section below.
 
 #### Brightness
-- Cut the face of the person in the photo
-- Calculate the average Brightness of face of the person
+- The Brightness plugin uses the Cropping function to cut the face of the person in the photo with a more tight result so the background captured is the small possible
+- Then it converts the image color from bgr (Blue Green Red) to hsv (hue saturation value) and separate in its components
+- Finally to calculate the brightness of the person face it calculates the mean value of the third component, the value.
 
 #### Colored Picture
 
