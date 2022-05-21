@@ -348,6 +348,10 @@ The connection between Database API and FotoFaces is not existing, because the o
 ### FotoFaces Algorithms
 All the algortihms used, will be presented and analyzed here, in the section below.
 
+
+#### Face Candidate Detection
+
+
 #### Brightness
 - The Brightness plugin uses the Cropping function to cut the face of the person in the photo with a more tight result so the background captured is the small possible
 - Then it converts the image color from bgr (Blue Green Red) to hsv (hue saturation value) and separate in its components
@@ -363,8 +367,9 @@ All the algortihms used, will be presented and analyzed here, in the section bel
 #### Crop Position
 
 #### Open Eyes
-
-#### Face Candidate Detection
+- This plugin uses the argument shape to calculate the distance between the eyelash using the landmarks 37 to 42 (left eye) and 43 48 (right eye)
+- Then ir return the average of this two distances
+- This algorithm is the same implemented in the old fotoface
 
 #### Face Recognition
 
