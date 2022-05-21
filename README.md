@@ -349,6 +349,8 @@ The connection between Database API and FotoFaces is not existing, because the o
 All the algortihms used, will be presented and analyzed here, in the section below.
 
 #### Brightness
+- Cut the face of the person in the photo
+- Calculate the average Brightness of face of the person
 
 #### Colored Picture
 
