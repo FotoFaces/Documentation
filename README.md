@@ -357,7 +357,7 @@ All the algortihms used, will be presented and analyzed here, in the section bel
 
 #### Cropping
 - This function is used to cut a photo in a format defined as an argument (crop_alpha).
-- It calculates the best location in the image due to the argument shape that is a numpy array of the result of the function predictor from the dlib library
+- It calculates the best location in the image due to the argument shape
 - This algorithm is the same implemented in the old fotoface
 
 #### Crop Position
