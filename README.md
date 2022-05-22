@@ -350,7 +350,19 @@ All the algortihms used, will be presented and analyzed here, in the section bel
 
 
 #### Face Candidate Detection
+- Converts the image to gray scale
+- Uses the dlib face detector to get all possible match in a dlib rectangle
+- Verifies if each rectangle is a good result (not None or all the rectangle is in the photo)
+- Converts the dlib rectangles to an array in opencv format (x y width height)  
+- Calculates the area of the rectangles
+- Chooses the one with the biggest area
+- Uses dlib face predictor with the 68 facial landmarks to detect each part of the face  (raw_shape) 
+- Converts the face raw_shape to numpy format (shape)
+- Returns the shape, rectangle in opencv format and the raw shape  
 
+
+dlib face predictor 68 facial landmarks
+![Use Case](https://github.com/FotoFaces/Documentation/blob/main/Images/algorithms/68-facial-landmarks.jpg)
 
 #### Brightness
 - The Brightness plugin uses the Cropping function to cut the face of the person in the photo with a more tight result so the background captured is the small possible
