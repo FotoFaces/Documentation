@@ -349,15 +349,15 @@ The connection between Database API and FotoFaces is not existing, because the o
 All the algortihms used, will be presented and analyzed here, in the section below.
 
 
-#### Face Candidate Detection
+#### Face Detection
 - Converts the image to gray scale
 - Uses the dlib face detector to get all possible match in a dlib rectangle
 - Verifies if each rectangle is a good result (not None or all the rectangle is in the photo)
-- Converts the dlib rectangles to an array in opencv format (x y width height)  
-- Calculates the area of the rectangles
+- Converts the dlib rectangles to an array in opencv format (x y width height)  (function rect_to_bb)
+- Calculates the area of the rectangles (function bb_area)
 - Chooses the one with the biggest area
 - Uses dlib face predictor with the 68 facial landmarks to detect each part of the face  (raw_shape) 
-- Converts the face raw_shape to numpy format (shape)
+- Converts the face raw_shape to numpy format (shape) (function shape_to_np)
 - Returns the shape, rectangle in opencv format and the raw shape  
 
 
@@ -369,14 +369,12 @@ dlib face predictor 68 facial landmarks
 - Then it converts the image color from bgr (Blue Green Red) to hsv (hue saturation value) and separate in its components
 - Finally to calculate the brightness of the person face it calculates the mean value of the third component, the value.
 
-#### Colored Picture
+#### Rotate
 
 #### Cropping
 - This function is used to cut a photo in a format defined as an argument (crop_alpha).
 - It calculates the best location in the image due to the argument shape
 - This algorithm is the same implemented in the old fotoface
-
-#### Crop Position
 
 #### Open Eyes
 - This plugin uses the argument shape to calculate the distance between the eyelash using the landmarks 37 to 42 (left eye) and 43 48 (right eye)
@@ -384,6 +382,10 @@ dlib face predictor 68 facial landmarks
 - This algorithm is the same implemented in the old fotoface
 
 #### Face Recognition
+- Uses the face detection function on the reference image to get the reference raw_shape 
+- Get the dlib get face chip function to get the reference and candidate face as a numpy array 
+- Uses the dlib face recognition model v1 to convert each face into 128D vectors (This function is a machine learning algorithm that maps human faces into a vectors where the pictures of the same person are mapped near to each other and different people are mapped far apart).
+- Returns the norm of the difference of both matrices 
 
 #### Glasses
 
@@ -391,8 +393,7 @@ dlib face predictor 68 facial landmarks
 
 #### Image Quality
 
-#### Resize
-
 #### Sunglasses
 
 #### Focus / Gaze
+
