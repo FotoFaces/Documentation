@@ -359,7 +359,7 @@ All the algortihms used, will be presented and analyzed here, in the section bel
 - Uses dlib face predictor with the 68 facial landmarks to detect each part of the face  (raw_shape) 
 - Converts the face raw_shape to numpy format (shape) (function shape_to_np)
 - Returns the shape, rectangle in opencv format and the raw shape  
-
+- This algorithm is the same implemented in the old fotoface
 
 dlib face predictor 68 facial landmarks
 ![Use Case](https://github.com/FotoFaces/Documentation/blob/main/Images/algorithms/68-facial-landmarks.jpg)
@@ -370,6 +370,7 @@ dlib face predictor 68 facial landmarks
 - Finally to calculate the brightness of the person face it calculates the mean value of the third component, the value.
 
 #### Rotate
+
 
 #### Cropping
 - This function is used to cut a photo in a format defined as an argument (crop_alpha).
@@ -391,9 +392,21 @@ dlib face predictor 68 facial landmarks
 
 #### Head Position
 
+- Use the opencv fucntion solvePnP to estimate the orientation of the face 
+
+- Returns an array with the pitch roll yaw metrics of the face
+- This algorithm is the same implemented in the old fotoface
 #### Image Quality
+- converts the image from bgr to gray scale
+- calculate the BRISQUE score using the opencv function QualityBRISQUE_compute with the brisque model and the brisque range
+- This algorithm is the same implemented in the old fotoface
 
 #### Sunglasses
 
 #### Focus / Gaze
+
+
+- This algorithm is the same implemented in the old fotoface
+
+
 
