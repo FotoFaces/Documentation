@@ -391,14 +391,19 @@ dlib face predictor 68 facial landmarks
 #### Glasses
 
 #### Head Position
-
+ 
 - Use the opencv fucntion solvePnP to estimate the orientation of the face 
-
+- converts the rotation vector to rotation matrix using opencv function rodrigues 
+- Stacks concatenate the rotation matrix with the translation vector (column wise) to get a projection matrix
+- Decomposes the  projection matrix using opencv to euler Angles
+- Seperate the euler angles to its components (pitch yaw and roll)
+- Convert this components from radians to degrees 
 - Returns an array with the pitch roll yaw metrics of the face
 - This algorithm is the same implemented in the old fotoface
+
 #### Image Quality
 - converts the image from bgr to gray scale
-- calculate the BRISQUE score using the opencv function QualityBRISQUE_compute with the brisque model and the brisque range
+- calculate the BRISQUE score using the opencv function QualityBRISQUE_compute with the brisque model and the brisque range yml files
 - This algorithm is the same implemented in the old fotoface
 
 #### Sunglasses
