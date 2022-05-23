@@ -18,7 +18,7 @@ This repository was created to help organize all the documentation made by the F
         - [Risks](#Risks)
         - [Expected Results](#Expected-Results)
         - [Related Work](#Related-Work)
-        - [Arquitecture](#Arquitecture)
+        - [Architecture](#Architecture)
         - [Roles](#Roles)
         - [Tasks](#Tasks)
         - [Communication Plan](#Communication-Plan)
@@ -40,7 +40,7 @@ This repository was created to help organize all the documentation made by the F
         - [Diagrams](#Diagrams)
             - [Deployment Diagram](#Deployment-Diagram)
             - [Domain Model](#Domain-Model)
-            - [Arquitecture](#Arquitecture)
+            - [Architecture](#Architecture)
         - [Other Organizations](#Other-Organizations)
             - [Use Case](#Use-Case)
             - [Database](#Database)
@@ -53,7 +53,7 @@ This repository was created to help organize all the documentation made by the F
             - [Photos](#Photos)
             - [API connection](#API-connection)
         - [FotoFaces](#FotoFaces)
-            - [Plugin Arquitecture](#Plugin-Arquitecture)
+            - [Plugin Architecture](#Plugin-Architecture)
             - [API connection](#API-connection)
         - [FotoFaces Algorithms](#FotoFaces-Algorithms)
             - [Face Recognition](#Face-Recognition)
@@ -102,7 +102,7 @@ We strive to invalidate photos which do not respect some standards: wearing glas
 - https://github.com/TianxingWu/realtime-glasses-detection
 - https://pyimagesearch.com/2019/03/11/liveness-detection-with-opencv/
 
-### Arquitecture
+### Architecture
 
 ### Roles
 | Filipe | Gonçalo | João | Pedro | Vicente |
@@ -232,7 +232,7 @@ The UA Information System holds photos from students', professors', investigator
 - Human Resources Representatives
 
 ### Diagrams
-All diagrams are in the Images/Arquitecture_Diagrams folder
+All diagrams are in the Images/Architecture_Diagrams folder
 
 #### Deployment Diagram
 ![Deployment Diagram](https://github.com/FotoFaces/Documentation/blob/main/Images/Architecure_Diagrams/DeploymentModel.png)
@@ -240,8 +240,8 @@ All diagrams are in the Images/Arquitecture_Diagrams folder
 #### Domain Model
 ![Domain Model](https://github.com/FotoFaces/Documentation/blob/main/Images/Architecure_Diagrams/DomainModel.png)
 
-#### Arquitecture
-![Simple Arquitecture](https://github.com/FotoFaces/Documentation/blob/main/Images/Architecure_Diagrams/Simple_Architecture.png)
+#### Architecture
+![Simple Architecture](https://github.com/FotoFaces/Documentation/blob/main/Images/Architecure_Diagrams/Simple_Architecture.png)
 
 ### Other Organizations
 All images  are in the Images/Simple_Organizations folder
@@ -340,7 +340,7 @@ The connection between both the Database API and Mobile App, and Mobile App and 
 
 ### FotoFaces
 
-#### Plugin Arquitecture
+#### Plugin Architecture
 
 #### API connection
 The connection between Database API and FotoFaces is not existing, because the old photo is sent directly from the Mobile App, meaning that the FotoFaces is completely independent to the Database.
