@@ -411,6 +411,12 @@ dlib face predictor 68 facial landmarks
 #### Focus / Gaze
 
 
+
+- uses opencv Bilateral filter to blur the eye without damaging the edges (eyelash)
+
+
+- Does the same for the right eye
+- returns the average of both ratio if has result for both eyes or just the one that has result 
 - This algorithm is the same implemented in the old fotoface
 
 
