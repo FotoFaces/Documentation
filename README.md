@@ -421,7 +421,9 @@ All the algortihms used, will be presented and analyzed here, in the section bel
 - uses opencv Bilateral filter to blur the eye without damaging the edges (eyelash)
 - uses opencv erode function to apply erosion (just like soil erosion) on the edges of the eye
 - uses opencv threshold function to convert the eye to black and white image, by converting all pixels above the threshold to white and to black otherwise. It choose the optimal threshold with the otsu algorithm
-- https://docs.opencv.org/4.x/d4/d73/tutorial_py_contours_begin.html
+- with this, it uses the function findCouters to denote the eye returning all necessary contours of the eyes boundaries (removes redundant points)  and the hierarchy of the nested contour
+
+
 
 
 - Does the same for the right eye
