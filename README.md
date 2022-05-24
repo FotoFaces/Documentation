@@ -364,7 +364,7 @@ All the algortihms used, will be presented and analyzed here, in the section bel
 ![68 facial landmarks](https://github.com/FotoFaces/Documentation/blob/main/Images/algorithms/68-facial-landmarks.jpg)
 
 <p align = "center">
-<b>dlib face predictor 68 facial landmarks</b>|
+<b>dlib face predictor 68 facial landmarks</b>
 </p>
 
 
@@ -415,8 +415,13 @@ All the algortihms used, will be presented and analyzed here, in the section bel
 #### Focus / Gaze
 
 
-
+- gets the values fo the landmarks of the left eye (37/38 and 40/41)
+- gets the image eye filtering by the landmarks
+- converts the eye to gray scale
 - uses opencv Bilateral filter to blur the eye without damaging the edges (eyelash)
+- uses opencv erode function to apply erosion (just like soil erosion) on the edges of the eye
+- uses opencv threshold function to convert the eye to black and white image, by converting all pixels above the threshold to white and to black otherwise. It choose the optimal threshold with the otsu algorithm
+- https://docs.opencv.org/4.x/d4/d73/tutorial_py_contours_begin.html
 
 
 - Does the same for the right eye
