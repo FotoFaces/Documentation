@@ -361,10 +361,12 @@ All the algortihms used, will be presented and analyzed here, in the section bel
 - Returns the shape, rectangle in opencv format and the raw shape  
 - This algorithm is the same implemented in the old fotoface
 
-dlib face predictor 68 facial landmarks
 ![68 facial landmarks](https://github.com/FotoFaces/Documentation/blob/main/Images/algorithms/68-facial-landmarks.jpg)
 
-|:--:|| <b>dlib face predictor 68 facial landmarks</b>|
+<p align = "center">
+<b>dlib face predictor 68 facial landmarks</b>|
+</p>
+
 
 #### Brightness
 - The Brightness plugin uses the Cropping function to cut the face of the person in the photo with a more tight result so the background captured is the small possible
