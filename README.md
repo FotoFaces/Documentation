@@ -421,7 +421,7 @@ All the algortihms used, will be presented and analyzed here, in the section bel
 - converts the image to hsv
 - cuts the eyes of the image
 - compare the brightness of the eyes with the brightness of a skin reference
-- if doesn't detect do another test
+- if doesn't detect, do a machine learning prediction test
 - gets again the eyes of the image
 - resizes the image to preferred size
 - converts it to BGR
@@ -447,6 +447,18 @@ All the algortihms used, will be presented and analyzed here, in the section bel
 - returns the average of both distance ratio or, in case of not having result of both eyes, returns just one ratio
 - This algorithm is the same implemented in the old fotoface
 
+
+#### Hats
+
+- do a machine learning prediction test
+- cuts the image between ears and nose and eyebrow to get the possible hat
+- resizes the image to preferred size
+- converts it to BGR
+- normalizes the image channel values
+- loads a json model to detect hats
+- compile the model with the library keras
+- do a prediction with the image test data
+- return results
 
 
 
