@@ -391,6 +391,14 @@ All the algortihms used, will be presented and analyzed here, in the section bel
 - Returns the norm of the difference of both matrices 
 
 #### Glasses
+- Gets the values of the nose (landmarks 29-36)
+- cuts a square of the image with the nose
+- Applies a blur using the guassian blur function from opencv for an accurate detection
+- uses opencv canny function to get the edges of the images (bounding the objects of the image, in this case the bridge of the glasses) as strips of white pixels
+- Takes the transpose of the image to get column vectors and Takes a vector along the center of the nose
+- Checks if there are any white pixels in the image 
+- This algorithm is the same implemented in the old fotofaces
+- This blog explains the same algorithm https://medium.com/mlearning-ai/glasses-detection-opencv-dlib-bf4cd50856da
 
 #### Head Position
  
@@ -402,7 +410,7 @@ All the algortihms used, will be presented and analyzed here, in the section bel
 - Convert this components from radians to degrees 
 - Convert this components to there absolute value
 - Returns an array with the pitch roll yaw metrics of the face
-- This algorithm is the same implemented in the old fotoface
+- This algorithm is the same implemented in the old fotofaces
 
 #### Image Quality
 - converts the image from bgr to gray scale
@@ -410,10 +418,22 @@ All the algortihms used, will be presented and analyzed here, in the section bel
 - This algorithm is the same implemented in the old fotoface
 
 #### Sunglasses
+- converts the image to hsv
+- cuts the eyes of the image
+- compare the brightness of the eyes with the brightness of a skin reference
+- if doesn't detect do another test
+- gets again the eyes of the image
+- resizes the image to preferred size
+- converts it to BGR
+- normalizes the image channel values
+- loads a json model to detect sunglasses
+- compile the model with the library keras
+- do a prediction with the image test data
+- return results
 
 #### Focus / Gaze
 
-- gets the values fo the landmarks of the left eye (37/38 and 40/41)
+- gets the values of the landmarks of the left eye (37/38 and 40/41)
 - gets the image eye filtering by the landmarks
 - converts the eye to gray scale
 - uses opencv Bilateral filter to blur the eye without damaging the edges (eyelash)
@@ -426,6 +446,8 @@ All the algortihms used, will be presented and analyzed here, in the section bel
 - Does the same for the right eye
 - returns the average of both distance ratio or, in case of not having result of both eyes, returns just one ratio
 - This algorithm is the same implemented in the old fotoface
+
+
 
 
 
