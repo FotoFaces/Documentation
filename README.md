@@ -350,6 +350,7 @@ All the algortihms used, will be presented and analyzed here, in the section bel
 
 
 #### Face Detection
+
 - Converts the image to gray scale
 - Uses the dlib face detector to get all possible match in a dlib rectangle
 - Verifies if each rectangle is a good result (not None or all the rectangle is in the photo)
@@ -368,68 +369,33 @@ All the algortihms used, will be presented and analyzed here, in the section bel
 </p>
 
 
-#### Brightness
-- The Brightness plugin uses the Cropping function to cut the face of the person in the photo with a more tight result so the background captured is the small possible
-- Then it converts the image color from bgr (Blue Green Red) to hsv (hue saturation value) and separate in its components
-- Finally to calculate the brightness of the person face it calculates the mean value of the third component, the value.
-
-
 #### Cropping
 - This function is used to cut a photo in a format defined as an argument (crop_alpha).
 - It calculates the best location in the image due to the argument shape
 - This algorithm is the same implemented in the old fotoface
 
+
+#### Brightness
+
+- The Brightness plugin uses the Cropping function to cut the face of the person in the photo with a more tight result so the background captured is the small possible
+- Then it converts the image color from bgr (Blue Green Red) to hsv (hue saturation value) and separate in its components
+- Finally to calculate the brightness of the person face it calculates the mean value of the third component, the value.
+
+
 #### Open Eyes
+
 - This plugin uses the argument shape to calculate the distance between the eyelash using the landmarks 37 to 42 (left eye) and 43 48 (right eye)
 - Then ir return the average of this two distances
 - This algorithm is the same implemented in the old fotoface
 
+
 #### Face Recognition
+
 - Uses the face detection function on the reference image to get the reference raw_shape 
 - Get the dlib get face chip function to get the reference and candidate face as a numpy array 
 - Uses the dlib face recognition model v1 to convert each face into 128D vectors (This function is a machine learning algorithm that maps human faces into a vectors where the pictures of the same person are mapped near to each other and different people are mapped far apart).
 - Returns the norm of the difference of both matrices 
 
-#### Glasses
-- Gets the values of the nose (landmarks 29-36)
-- cuts a square of the image with the nose
-- Applies a blur using the guassian blur function from opencv for an accurate detection
-- uses opencv canny function to get the edges of the images (bounding the objects of the image, in this case the bridge of the glasses) as strips of white pixels
-- Takes the transpose of the image to get column vectors and Takes a vector along the center of the nose
-- Checks if there are any white pixels in the image 
-- This algorithm is the same implemented in the old fotofaces
-- This blog explains the same algorithm https://medium.com/mlearning-ai/glasses-detection-opencv-dlib-bf4cd50856da
-
-#### Head Position
- 
-- Use the opencv fucntion solvePnP to estimate the orientation of the face 
-- converts the rotation vector to rotation matrix using opencv function rodrigues 
-- Stacks concatenate the rotation matrix with the translation vector (column wise) to get a projection matrix
-- Decomposes the  projection matrix using opencv to euler Angles
-- Seperate the euler angles to its components (pitch yaw and roll)
-- Convert this components from radians to degrees 
-- Convert this components to there absolute value
-- Returns an array with the pitch roll yaw metrics of the face
-- This algorithm is the same implemented in the old fotofaces
-
-#### Image Quality
-- converts the image from bgr to gray scale
-- calculate the BRISQUE score using the opencv function QualityBRISQUE_compute with the brisque model and the brisque range yml files
-- This algorithm is the same implemented in the old fotoface
-
-#### Sunglasses
-- converts the image to hsv
-- cuts the eyes of the image
-- compare the brightness of the eyes with the brightness of a skin reference
-- if doesn't detect, do a machine learning prediction test
-- gets again the eyes of the image
-- resizes the image to preferred size
-- converts it to BGR
-- normalizes the image channel values
-- loads a json model to detect sunglasses
-- compile the model with the library keras
-- do a prediction with the image test data
-- return results
 
 #### Focus / Gaze
 
@@ -448,6 +414,18 @@ All the algortihms used, will be presented and analyzed here, in the section bel
 - This algorithm is the same implemented in the old fotoface
 
 
+#### Glasses
+
+- Gets the values of the nose (landmarks 29-36)
+- cuts a square of the image with the nose
+- Applies a blur using the guassian blur function from opencv for an accurate detection
+- uses opencv canny function to get the edges of the images (bounding the objects of the image, in this case the bridge of the glasses) as strips of white pixels
+- Takes the transpose of the image to get column vectors and Takes a vector along the center of the nose
+- Checks if there are any white pixels in the image 
+- This algorithm is the same implemented in the old fotofaces
+- This blog explains the same algorithm https://medium.com/mlearning-ai/glasses-detection-opencv-dlib-bf4cd50856da
+
+
 #### Hats
 
 - do a machine learning prediction test
@@ -456,6 +434,42 @@ All the algortihms used, will be presented and analyzed here, in the section bel
 - converts it to BGR
 - normalizes the image channel values
 - loads a json model to detect hats
+- compile the model with the library keras
+- do a prediction with the image test data
+- return results
+
+
+#### Head Position
+ 
+- Use the opencv fucntion solvePnP to estimate the orientation of the face 
+- converts the rotation vector to rotation matrix using opencv function rodrigues 
+- Stacks concatenate the rotation matrix with the translation vector (column wise) to get a projection matrix
+- Decomposes the  projection matrix using opencv to euler Angles
+- Seperate the euler angles to its components (pitch yaw and roll)
+- Convert this components from radians to degrees 
+- Convert this components to there absolute value
+- Returns an array with the pitch roll yaw metrics of the face
+- This algorithm is the same implemented in the old fotofaces
+
+
+#### Image Quality
+
+- converts the image from bgr to gray scale
+- calculate the BRISQUE score using the opencv function QualityBRISQUE_compute with the brisque model and the brisque range yml files
+- This algorithm is the same implemented in the old fotoface
+
+
+#### Sunglasses
+
+- converts the image to hsv
+- cuts the eyes of the image
+- compare the brightness of the eyes with the brightness of a skin reference
+- if doesn't detect, do a machine learning prediction test
+- gets again the eyes of the image
+- resizes the image to preferred size
+- converts it to BGR
+- normalizes the image channel values
+- loads a json model to detect sunglasses
 - compile the model with the library keras
 - do a prediction with the image test data
 - return results
