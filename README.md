@@ -373,8 +373,6 @@ All the algortihms used, will be presented and analyzed here, in the section bel
 - Then it converts the image color from bgr (Blue Green Red) to hsv (hue saturation value) and separate in its components
 - Finally to calculate the brightness of the person face it calculates the mean value of the third component, the value.
 
-#### Rotate
-
 
 #### Cropping
 - This function is used to cut a photo in a format defined as an argument (crop_alpha).
@@ -402,6 +400,7 @@ All the algortihms used, will be presented and analyzed here, in the section bel
 - Decomposes the  projection matrix using opencv to euler Angles
 - Seperate the euler angles to its components (pitch yaw and roll)
 - Convert this components from radians to degrees 
+- Convert this components to there absolute value
 - Returns an array with the pitch roll yaw metrics of the face
 - This algorithm is the same implemented in the old fotoface
 
