@@ -49,8 +49,7 @@ This repository was created to help organize all the documentation made by the F
     - [Construction Phase](#Construction-Phase)
         - [API](#API)
         - [Mobile Applicaion](#Mobile-Applicaion)
-            - [Design](#Design)
-            - [Photos](#Photos)
+            - [Screens](#Screens)
             - [API connection](#API-connection)
         - [FotoFaces](#FotoFaces)
             - [Plugin Architecture](#Plugin-Architecture)
@@ -311,11 +310,6 @@ Below, its listed the most important screens used in the application, and what e
 
 - ResetPasswordScreen
     - Screen in which the user will try and recuperate its account
-    - ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    - ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    - ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    - ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    - ^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
 
 - MainScreen
     - Screen in which the user can see some of their personal information and update their photo
@@ -328,15 +322,11 @@ Below, its listed the most important screens used in the application, and what e
     - Prompts the user with both old and new photo and asks the user if he will update or not
     - If he updates, then he will be redirected to the StartScreen, else he will be redirected back to the MainScreen
 
-#### Design
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #### API connection
 The connection between both the Database API and Mobile App, and Mobile App and FotoFaces is made using the function fetch() with FormData to encrypt the body.
+
+
 
 ### FotoFaces
 
@@ -347,7 +337,6 @@ The connection between Database API and FotoFaces is not existing, because the o
 
 ### FotoFaces Algorithms
 All the algortihms used, will be presented and analyzed here, in the section below.
-
 
 #### Face Detection
 
@@ -473,7 +462,3 @@ All the algortihms used, will be presented and analyzed here, in the section bel
 - compile the model with the library keras
 - do a prediction with the image test data
 - return results
-
-
-
-
