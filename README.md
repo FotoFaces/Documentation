@@ -1,13 +1,6 @@
 # FotoFaces - Documentation
 This repository was created to help organize all the documentation made by the Fotofaces Project.
 
-# Development Team
-- [Filipe Gonçalves - 98083](https://github.com/FlipGoncalves)
-- [Pedro Lopes - 97827](https://github.com/Pedro-Lopes-Frisson)
-- [Goncalo Machado - 98359](https://github.com/goncalo-machado)
-- [Vicente Costa - 98515](https://github.com/SrPhoenix)
-- [João Borges - 98155](https://github.com/JoaoBorgesUA)
-
 # Index
 - [FotoFaces - Documentation](#FotoFaces---Documentation)
 
